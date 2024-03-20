@@ -13,9 +13,9 @@ use App\Http\Controllers\CustomFn; //自訂函數
 use App\Models\Manager AS data_manager;
 use App\Models\Bacase AS data_case;
 use App\Models\Baqa AS data_qa;
-use App\Models\article AS data_article;
-use App\Models\articleclass AS data_articleclass;
-use App\Models\articlemessage AS data_articlemessage;
+use App\Models\Article AS data_article;
+use App\Models\Articleclass AS data_articleclass;
+use App\Models\Articlemessage AS data_articlemessage;
 class ApiController extends Controller
 {
   public function jwt1(Request $request)
