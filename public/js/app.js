@@ -33231,7 +33231,7 @@ function getSrc(url) {
   // img :src="$getSrc('imgsrc.png')"
 }
 function getUrl(url) {
-  return new URL("/src/assets/".concat("img", "/").concat(url), "file:///D:/xampp/htdocs/moneyhome/resources/js/composables/public.js").href;
+  return new URL("/src/assets/".concat("img", "/").concat(url), "file:///var/www/html/moneyhome/resources/js/composables/public.js").href;
   // 圖片返回絕對路徑 使用方式 template
   // 絕對路徑 http://localhost:5173/@fs/src/assets/img/${url}
   // img :src="$getUrl('imgsrc.png')"

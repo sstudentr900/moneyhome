@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Validator;//驗證資料
 // use Datomon\LaravelNewebpay\Library\NewebPay;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
-use App\Models\article AS data_article;
-use App\Models\articleclass AS data_articleclass;
+use App\Models\Article AS data_article;
+use App\Models\Articleclass AS data_articleclass;
 class TestController extends Controller
 {
   // public function test() {
