@@ -106,7 +106,7 @@ class ApiController extends Controller
   //前債務催收文章
   public function fnarticle($category,$pageNow)
   {
-    $showQuantity = 1; //顯示幾筆
+    $showQuantity = 10; //顯示幾筆
     $result= CustomFn::search(data_article::where([['assort',$category],['releases','y']])->count(), $showQuantity, $pageNow);
     $datas = data_article::select('id','cover','title','content')->where([['assort',$category],['releases','y']])->offset($result['startValue'])->limit($result['endValue'])->orderBy('sort', 'asc')->get();
     //當前類別
