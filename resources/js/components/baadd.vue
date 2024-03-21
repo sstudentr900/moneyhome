@@ -53,6 +53,7 @@
           <formnumber v-else-if="item.id=='price'" :id="item.id" :text='item.text' :value='item.value' class="_mab32" :errors="errors" />
           <formselect v-else-if="item.id=='assort'" :id="item.id" :text='item.text' :options='props.assort?props.assort:""' :value='item.value' class="_mab32" :errors="errors" />
           <forminput v-else-if="item.id=='name'" :id="item.id" :text='item.text' :value='item.value' class="_mab32" :errors="errors" />
+          <forminput v-else-if="item.id=='url'" :id="item.id" :text='item.text' :value='item.value' class="_mab32" :errors="errors" />
           <forminput v-else-if="item.id=='class'" :id="item.id" :text='item.text' :value='item.value' class="_mab32" :errors="errors" />
           <forminput v-else-if="item.id=='title'" :id="item.id" :text='item.text' :value='item.value' class="_mab32" :errors="errors" />
           <formcontent v-else-if="item.id=='content'" :id="item.id" :text='item.text' :value='item.value' class="_mab32" :errors="errors" />

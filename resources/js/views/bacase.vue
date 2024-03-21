@@ -25,6 +25,7 @@
     {'id':'sort','text':"排序",'type':"sort"},
     {'id':'title','text':"標題",'type':"text"},
     {'id':'price','text':"價格",'type':"sort"},
+    {'id':'url','text':"連結",'type':"text"},
     {'id':'content','text':"內容",'type':"textarea"},
     {'id':'releases','text':"狀態",'type':"radio"},
   ])
@@ -33,6 +34,7 @@
     {'id':'sort','text':"排序",'type':"sort"},
     {'id':'title','text':"標題",'type':"text"},
     {'id':'price','text':"價格",'type':"sort"},
+    {'id':'url','text':"連結",'type':"text"},
     {'id':'content','text':"內容",'type':"textarea"},
     {'id':'releases','text':"狀態",'type':"radio"},
   ])

@@ -17,6 +17,7 @@ class Bacase extends Model
       'title',
       'content',
       'price',
+      'url',
       'releases',
     ];
     protected function serializeDate(DateTimeInterface $date)

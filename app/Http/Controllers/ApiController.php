@@ -83,7 +83,7 @@ class ApiController extends Controller
     $pageNow = 1;
     $showQuantity = 8; //顯示幾筆
     $result= CustomFn::search(data_case::where('releases','y')->count(), $showQuantity, $pageNow);
-    $datas = data_case::select('id','cover','title','content','price')->where('releases','y')->offset($result['startValue'])->limit($result['endValue'])->orderBy('sort', 'asc')->get();
+    $datas = data_case::select('id','cover','title','content','price','url')->where('releases','y')->offset($result['startValue'])->limit($result['endValue'])->orderBy('sort', 'asc')->get();
     //判斷有無值
     if($datas->isEmpty()){
       return response()->json([
@@ -472,7 +472,7 @@ class ApiController extends Controller
   {
     $showQuantity = 7; //顯示幾筆
     $result= CustomFn::search(data_case::count(), $showQuantity, $pageNow);
-    $datas = data_case::select('id','sort','cover','title','content','price','updated_at', 'releases')->offset($result['startValue'])->limit($result['endValue'])->orderBy('sort', 'asc')->get();
+    $datas = data_case::select('id','sort','cover','title','content','price','url','updated_at', 'releases')->offset($result['startValue'])->limit($result['endValue'])->orderBy('sort', 'asc')->get();
     //判斷有無值
     if($datas->isEmpty()){
       return response()->json([
@@ -507,6 +507,7 @@ class ApiController extends Controller
       'sort' => ['required'],
       'cover' => ['required'],
       'price' => ['required','max:20'],
+      'url' => ['required','max:255'],
       'title' => ['required','max:20'],
       'content' => ['required','max:255'],
       'releases' => ['required','in:y,n'],
@@ -525,6 +526,7 @@ class ApiController extends Controller
       'cover' => CustomFn::imgAdd($input['cover'],'bacase'),
       'title' => $input['title'],
       'price' => $input['price'],
+      'url' => $input['url'],
       'content' => $input['content'],
       'releases' => $input['releases']
     ]);
@@ -557,6 +559,7 @@ class ApiController extends Controller
       'cover' => ['required'],
       'title' => ['required','max:20'],
       'price' => ['required','max:20'],
+      'url' => ['required','max:255'],
       'content' => ['required','max:255'],
       'releases' => ['required','in:y,n'],
     ]);
@@ -584,6 +587,7 @@ class ApiController extends Controller
     $data->sort = $input['sort'];
     $data->title = $input['title'];
     $data->price = $input['price'];
+    $data->url = $input['url'];
     $data->content = $input['content'];
     $data->releases = $input['releases'];
     $data->save();

@@ -55,12 +55,12 @@
       </div>
       <div class="mySwiper" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
         <div class="items swiper-wrapper">
-          <div class="item swiper-slide" v-for="(item,index) in nowdata" :key="index">
+          <a class="item swiper-slide" v-for="(item,index) in nowdata" :key="index" :href='item.url' target="_black">
             <div class="img_mab24">
               <img class="_fluid" :src="$getSrc(item.cover)"/>
             </div>
-            <div class="title_mab16_fs24_fw600_coBlack800_ellipsis1">{{item.title}}</div>
-            <div class="text_mab16_fs18_fw400_coBlack800_ellipsis2">{{item.content}}</div>
+            <div class="title_mab16_fs24_fw600_coBlack800_ellipsis1_lh14">{{item.title}}</div>
+            <div class="text_mab16_fs18_fw400_coBlack800_ellipsis2_lh14">{{item.content}}</div>
             <hr class="_hr">
             <div class="priceDiv_dif_aic_jcs">
               <div class="price_fs24_fw800_coGreen500">${{item.price}}</div>
@@ -91,7 +91,7 @@
                 </svg>
               </div>
             </div>
-          </div>
+          </a>
           <!-- <div class="item swiper-slide">
             <div class="img_mab24">
               <img class="_fluid" :src="$getSrc('home_case.png')"/>
