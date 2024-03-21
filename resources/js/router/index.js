@@ -8,7 +8,14 @@ const router = createRouter({
   // history: createWebHistory(import.meta.env.BASE_URL),
   routes: constantRouter,
   //滾動行為
-  scrollBehavior(){
+  scrollBehavior(to, from, savedPosition){
+    // console.log('hash',to.hash)
+    if (to.hash) {
+      return{
+        el: to.hash,
+        behavior: 'smooth'
+      }
+    }
     return{
       left:0,
       top:0,

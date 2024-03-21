@@ -5,6 +5,7 @@
       default:''
     }
   })
+  
   const isActiveFn = () => {
     document.body.classList.toggle('active');
   }
@@ -29,14 +30,13 @@
         <div class="menusDiv_dif_fs18_fw800_coGreen_aic_jcs" data-aos="fade-left" data-aos-duration="600">
           <ul class="itemDiv_dif_aic_jcc">
             <li><a href="">債務催繳分析</a></li>
-            <li><a href="">服務項目</a></li>
-            <!-- <li><a href="">債務知識543</a></li> -->
+            <li><router-link :to="{name:'fnhome',hash:'#home_status'}">服務項目</router-link></li> 
             <li><router-link :to="{name:'fnknowledge',params:{category:'98',pagenow:'1'}}">債務知識543</router-link></li>
             <li><a href="">關於我們</a></li>
-            <li><a href="">免費諮詢請點我</a></li>
+            <li><a href="https://lin.ee/YFhBGhz" target="_black">免費諮詢請點我</a></li>
           </ul>
           <div class="downlodDiv">
-            <a class="_btn">借據範本下載</a>
+            <a class="_btn" :href="$getSrc('document.pdf')" download="download">借據範本下載</a>
           </div>
         </div>
         <div class="publicHamburger_dif_aic_cup" @click="isActiveFn">
